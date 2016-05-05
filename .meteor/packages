@@ -22,3 +22,7 @@ accounts-ui
 accounts-password
 simple:rest
 twbs:bootstrap
+meteorhacks:npm
+
+
+npm-container
