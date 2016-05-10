@@ -33,7 +33,7 @@ jQuery(document).ready(function() {
     var scrollPos = $(document).scrollTop();
     $('.navbar-default .navbar-nav>li>a').each(function() {
       var currLink = $(this);
-      var refElement = $(currLink.attr("href"));
+      var refElement = $(currLink.data("id"));
       var position = refElement.position();
       if (position) {
         if (position.top <= scrollPos && position.top + refElement.height() > scrollPos) {

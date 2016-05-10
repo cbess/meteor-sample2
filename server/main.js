@@ -36,8 +36,12 @@ Meteor.startup(() => {
     tags: {}
   }, app);
 
-  // serves the homepage, seo friendly
+  // serves the site, seo friendly
   app.get('/', (req, res) => {
     res.render('index.njk');
+  });
+
+  app.get('/about', (req, res) => {
+    res.render('about.njk');
   });
 });
