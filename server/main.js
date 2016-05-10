@@ -36,7 +36,8 @@ Meteor.startup(() => {
     tags: {}
   }, app);
 
-  app.get('/test/one', (req, res) => {
+  // serves the homepage, seo friendly
+  app.get('/', (req, res) => {
     res.render('index.njk');
   });
 });
