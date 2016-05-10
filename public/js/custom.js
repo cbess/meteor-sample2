@@ -34,11 +34,14 @@ jQuery(document).ready(function() {
     $('.navbar-default .navbar-nav>li>a').each(function() {
       var currLink = $(this);
       var refElement = $(currLink.attr("href"));
-      if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-        $('.navbar-default .navbar-nav>li>a').removeClass("active");
-        currLink.addClass("active");
-      } else {
-        currLink.removeClass("active");
+      var position = refElement.position();
+      if (position) {
+        if (position.top <= scrollPos && position.top + refElement.height() > scrollPos) {
+          $('.navbar-default .navbar-nav>li>a').removeClass("active");
+          currLink.addClass("active");
+        } else {
+          currLink.removeClass("active");
+        }
       }
     });
   }
